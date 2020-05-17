@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Veujs Framwork js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .canvas{
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            background: #ddd;
+        }
+    </style>
     <title>Vue Basics</title>
 </head>
 <body>
@@ -12,7 +20,8 @@
     <h1>View Basics</h1>
     <div id="app">
         <h2>{{ title }}</h2>
-        
+        <button @click="logEvent">Log Event Info</button>
+        <div class="canvas" @mousemove="logCoords">{{ coords.x }}, {{ coords.y }}</div>
     </div>
 
     <script src="app.js"></script>
